@@ -1,0 +1,68 @@
+version: '3'
+
+services:
+    php:
+        build: ./php/
+        image: php:7.4-fpm
+        volumes:
+            - ./public_html:/public_html
+        networks:
+            - nginxphp
+
+            
+    db:
+        image: mysql:5.7
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: phpmyadmin
+            MYSQL_USER: user
+            MYSQL_PASSWORD: user
+        container_name: mysql-nginxAmplify
+        volumes: 
+            - /testdb/:/var/lib/mysql
+            - ./mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+        ports:
+            - "3307:3306"
+        networks: 
+            - nginxphp
+
+
+
+    phpmyadmin:
+        image: phpmyadmin:latest
+        depends_on:
+            - db
+        restart: always
+        ports:
+            - 127.0.0.5:8080:80
+        environment:
+            - PMA_ARBITRARY=1
+        container_name: phpmyadmin-nginxAmplify
+        networks: 
+            - nginxphp
+
+
+
+    web:
+        container_name: nginxAmplify
+        build: .
+        image: nginx:1.15.4
+        ports:
+            - "127.0.0.1:8080:80"
+        volumes:
+            - ./public_html:/public_html
+            - ./conf.d:/etc/nginx/conf.d
+            - /etc/localtime:/etc/localtime
+        networks:
+            - nginxphp
+
+
+
+
+networks:
+    nginxphp:
+        ipam:
+            driver: default
+            config: 
+                - subnet: 172.72.72.72/29

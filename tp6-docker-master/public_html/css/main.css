@@ -1,0 +1,90 @@
+html,#bg {
+  /* background: url("https://coupekennen.fr/public/img/Coupe-Kennen-Bg-fates.jpg") no-repeat center center fixed; */
+  background-size: cover;
+  /* background-color: red; */
+}
+
+pre {
+  /* background-color: #c63c88; */
+  opacity: 0.6;
+}
+
+
+#center {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 12%;
+  margin-right: 5%;
+  border: 1px black;
+  border-radius: 10px;
+  opacity: 0.85;
+}
+
+nav {
+  opacity: 0.92;
+}
+
+h2  {
+  margin-left: 95px;
+}
+
+#id_team_barrettes,#tb {
+  font-family: Karla;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  letter-spacing: .04em;
+  line-height: 1.8em;
+  text-transform: none;
+  color: #490eec;
+}
+
+
+#top, #leetchi {
+  margin-top: 120px;
+}
+
+.card-deck {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 17px;
+  color: #490eac;
+  border-color: #490eac;
+}
+/* 
+
+#audio {
+  display: none;
+}
+
+.curved {
+  display: block;
+  background: url("https://i.pinimg.com/originals/8f/f2/08/8ff208280902d14137ca465641593815.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+footer {
+  background-color: #f4cae0;
+  font-size: 15px;
+
+}
+
+
+#partenaires{
+  margin-top:80px;
+  padding: 20px;
+  font-family: Karla;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  letter-spacing: .04em;
+  line-height: 1.8em;
+  text-transform: none;
+  color: #490eec;
+}
+
+
+#Anectdotes{
+  margin-top: 15px;
+} */

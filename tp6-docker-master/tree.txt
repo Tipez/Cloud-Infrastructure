@@ -1,0 +1,20 @@
+.
+├── conf.d
+│   └── stub_status.conf
+├── docker-compose.yml
+├── Dockerfile
+├── entrypoint.sh
+├── LICENSE
+├── mysql
+│   └── mysqld.cnf
+├── php
+│   └── Dockerfile
+├── public_html
+│   ├── css
+│   │   └── main.css
+│   ├── index.php
+│   └── info.php
+├── README.md
+└── tree.txt
+
+5 directories, 12 files
