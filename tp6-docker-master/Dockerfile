@@ -1,6 +1,6 @@
 FROM nginx:1.15.4
 
-ENV API_KEY '529b025ea0b6a51c60cfb8d4953ddd38'
+ENV API_KEY 'API_KEY here from https://amplify.nginx.com/dashboard/' 
 ENV AMPLIFY_IMAGENAME 'AmplifyAgent1Dev'
 
 
